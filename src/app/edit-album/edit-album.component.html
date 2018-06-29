@@ -14,6 +14,9 @@
 <label>New Album price:</label>
 <input [(ngModel)]="selectedAlbum.price">
 
+<label>New Album image:</label>
+<input [(ngModel)]="selectedAlbum.imageUrl">
+
 <button class="btn btn-info" (click)="beginUpdatingAlbum(selectedAlbum)">Update</button>
 <hr>
 <button class="btn btn-danger" (click)="beginDeletingAlbum(selectedAlbum)">Delete</button>

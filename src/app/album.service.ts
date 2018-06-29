@@ -10,7 +10,7 @@ export class AlbumService {
     this.albums = database.list('albums');
   }
 
-  getAlbumById(albumId: string){
+  getAlbumById(albumId: string) {
     return this.database.object('albums/' + albumId);
   }
 
@@ -32,15 +32,17 @@ export class AlbumService {
     this.albums.push(newAlbum);
   }
 
-  updateAlbum(localUpdatedAlbum){
-    let albumEntryInFireBase = this.getAlbumById(localUpdatedAlbum.$key);
+  updateAlbum(localUpdatedAlbum) {
+    const albumEntryInFireBase = this.getAlbumById(localUpdatedAlbum.$key);
     albumEntryInFireBase.update({title: localUpdatedAlbum.title,
                                 artist: localUpdatedAlbum.artist,
-                                description: localUpdatedAlbum.description});
+                                description: localUpdatedAlbum.description,
+                                price: localUpdatedAlbum.price,
+                                imageUrl: localUpdatedAlbum.imageUrl});
   }
 
-  deleteAlbum(localUpdatedAlbum){
-    let albumEntryInFireBase = this.getAlbumById(localUpdatedAlbum.$key);
+  deleteAlbum(localUpdatedAlbum) {
+    const albumEntryInFireBase = this.getAlbumById(localUpdatedAlbum.$key);
     albumEntryInFireBase.remove();
   }
 

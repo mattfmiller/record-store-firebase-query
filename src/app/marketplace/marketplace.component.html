@@ -14,7 +14,9 @@
 <div *ngFor="let album of albums | async" class="card card-default">
   <div class="card-body">
     <div class="row">
-      <h3 class="col-10"(click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3><h4 class="col-2">${{album.price}}</h4>
+      <img src="{{album.imageUrl}}" class="col-1">
+      <h3 class="col-9"(click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
+      <h4 class="col-2">${{album.price}}</h4>
     </div>
     <div *ngIf="currentRoute === '/admin'">
       {{album.description}}<br>

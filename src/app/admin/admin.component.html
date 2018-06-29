@@ -27,7 +27,13 @@
         <br>
         <input type="number" #newPrice>
       </div>
-      <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value, newPrice.value); newTitle.value=''; newArtist.value=''; newDescription.value=''; newPrice.value=''">Add</button>
+
+      <div>
+        <label>Album Image:</label>
+        <br>
+        <input #newImageUrl>
+      </div>
+      <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value, newPrice.value, newImageUrl.value); newTitle.value=''; newArtist.value=''; newDescription.value=''; newPrice.value=''; newImageUrl.value=''">Add</button>
     </div>
   </div>
 </div>

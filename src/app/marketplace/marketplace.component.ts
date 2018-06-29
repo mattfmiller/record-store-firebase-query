@@ -14,8 +14,8 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class MarketplaceComponent implements OnInit {
   albums: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-  filterByPrice: string = "all";
-  showEdit: boolean = false;
+  filterByPrice = 'all';
+  showEdit = false;
   shownAlbum = null;
 
   constructor(private router: Router, private albumService: AlbumService) {}
@@ -36,7 +36,7 @@ export class MarketplaceComponent implements OnInit {
     }
   }
 
-  displayEdit(album){
+  displayEdit(album) {
     this.clearDisplay();
     this.showEdit = true;
     this.shownAlbum = album;

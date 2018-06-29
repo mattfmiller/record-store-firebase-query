@@ -9,3 +9,8 @@ h3:hover {
   flex-direction: row;
   justify-content: flex-end;
 }
+
+img {
+  height: 50px;
+  width: 50px;
+}

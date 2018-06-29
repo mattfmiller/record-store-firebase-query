@@ -1,0 +1,14 @@
+.logo {
+  margin: 20px 0;
+}
+
+.logo img {
+  display: inline-block;
+  margin-right: 10px;
+  height: 80px;
+}
+
+.logo h1 {
+  display: inline-block;
+  padding-top: 20px;
+}
